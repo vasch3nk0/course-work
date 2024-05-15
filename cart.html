@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <!-- Навигация -->
+    <nav class="left-nav">
+        <a href="./index.html" class="link">Главная</a>
+        <a href="./shops.html" class="link">Магазины</a>
+        <a href="./cart.html" class="link cart-link">Корзина</a>
+    </nav>
+
+    <!-- Корзина и бургер меню -->
+    <div class="right-nav">
+        <a href="./cart.html" class="cart">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                 width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+            </svg>
+        </a>
+
+        <div class="burger">
+            <span></span>
+        </div>
+    </div>
+</header>
+
+<!-- Контент страницы -->
+<main>
+    <h1 class="title">Корзина:</h1>
+
+    <div class="items">
+        <div class="item">
+            <h2 class="item-name">Xiaomi Redmi Note 13</h2>
+
+            <div class="item-quantity-container">
+                <button class="quantity-dec">-</button>
+                <span class="item-quantity">2</span>
+                <button class="quantity-inc">+</button>
+            </div>
+
+            <span class="item-price">28 990 ₽</span>
+        </div>
+
+        <div class="item">
+            <h2 class="item-name">POCO X6 5G</h2>
+
+            <div class="item-quantity-container">
+                <button class="quantity-dec">-</button>
+                <span class="item-quantity">1</span>
+                <button class="quantity-inc">+</button>
+            </div>
+
+            <span class="item-price">12 490 ₽</span>
+        </div>
+
+        <div class="item">
+            <h2 class="item-name">Acer Aspire 3</h2>
+
+            <div class="item-quantity-container">
+                <button class="quantity-dec">-</button>
+                <span class="item-quantity">3</span>
+                <button class="quantity-inc">+</button>
+            </div>
+
+            <span class="item-price">64 419 ₽</span>
+        </div>
+    </div>
+
+    <button class="buy">Оформить заказ</button>
+</main>
+
+<!-- Подвал -->
+<footer>
+    <div class="top-footer">
+        <a href="./index.html" class="link">Главная</a>
+
+        <a href="./shops.html" class="link">Магазины</a>
+    </div>
+
+    <div class="bottom-footer">
+        <p class="copyright">Все права защищены 2024 &copy;</p>
+    </div>
+</footer>
+
+<script>
+    document.querySelector('.burger').addEventListener('click', function () {
+        this.classList.toggle('active');
+        document.querySelector('.left-nav').classList.toggle('open');
+    })
+</script>
+
+</body>
+</html>

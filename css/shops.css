@@ -1,0 +1,47 @@
+.shops {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.shop {
+    padding: 25px;
+    border: 1px solid #e5e5e5;
+    border-radius: 25px;
+
+    display: grid;
+    grid-template-areas:
+    "name name time"
+    "address address address";
+
+    grid-gap: 10px;
+}
+
+.shop-name {
+    grid-area: name;
+    font-weight: 700;
+}
+
+.shop-time {
+    grid-area: time;
+    text-align: right;
+    font-weight: 500;
+}
+
+.shop-address {
+    grid-area: address;
+    font-weight: 300;
+}
+
+@media (max-device-width: 768px) {
+    .shops {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .shop {
+        grid-template-areas:
+        "name time"
+        "address address";
+    }
+}
